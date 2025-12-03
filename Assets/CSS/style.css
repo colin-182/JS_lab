@@ -29,7 +29,7 @@ nav ul li a {
 }
 
 .hero {
-    background: url('https://unsplash.com/photos/rock-formation-beside-sea-under-white-sky-ezJhm4xrHAM') center/cover;
+    background: \\fix here needed;
     height: 70vh;
     display: flex;
     flex-direction: column;
@@ -115,7 +115,7 @@ input, textarea {
 button {
     padding: 10px;
     background: #1b5e20;
-    colour: white;
+    color: white;
     cursor: pointer;
 }
 
