@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1b5e20;
+    padding: 15px;
+}
