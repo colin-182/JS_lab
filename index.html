@@ -1,10 +1,98 @@
 <!DOCTYPE html>
-<html>
- <head>
- <title>JavaScript Lab</title>
- </head>
- <body>
- <h1>Hello, World!</h1>
- <script src="script.js"></script>
- </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>Discovering Ireland | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>Discovering Ireland</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Explore the Beauty of Ireland</h2>
+        <p>From rugged coastlines to vibrant cities - discover it all.</p>
+        <button onclick="scrollToSection('destinations')">Explore Destinations</button>
+    </section>
+
+    <section id="destinations" class="section">
+        <h2>Top Destinations</h2>
+        <div class="filters">
+            <button onclick="filterDestinations('all')">All</button>
+            <button onclick="filterDestinations('city')">Cities</button>
+            <button onclick="filterDestinations('nature')">Nature</button>
+            <button onclick="filterDestinations('heritage')">Heritage</button>
+        </div>
+
+        <div class="cards">
+            <div class="card" data-category="city">
+                <img src="*INSERT IMAGE HERE*" alt="Dublin">
+                <h3>Dublin</h3>
+                <p class="hidden">Ireland's capital city, famous for its culture, pubs and history.</p>
+                <button onclick="toggleInfo(this)">More Info</button>
+        </div>       
+
+                <div class="card" data-category="nature">
+                    <img src="*INSERT IMAGE HERE*" alt="Cliffs of Moher">
+                    <h3>Cliffs of Moher</h3>
+                    <p class="hidden">One of Ireland's most iconic natural wonders.</p>
+                    <button onclick="toggleInfo(this)">More Info</button>
+                </div>
+
+                <div class="card" data-category="heritage">
+                    <img src="*INSERT IMAGE HERE*" alt="Newgrange">
+                    <h3>Newgrange</h3>
+                    <p class="hidden">A prehistoric monument older than the pyramids.</p>
+                    <button onclick="toggleInfo(this)">More Info</button>
+                </div>
+    
+
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2>Ireland Photo Gallery</h2>
+
+        <div class="gallery">
+            <img src="*INSERT IMAGE HERE*" onclick="openModal(this.src)">
+            <img src="*INSERT IMAGE HERE*" onclick="openModal(this.src)">
+            <img src="*INSERT IMAGE HERE*" onclick="openModal(this.src)">
+        </div>
+    </section>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modal-img">
+    </div>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+
+        <form id="contactForm" onsubmit="return handleForm(event)">
+            <label>Name</label>
+            <input type="text" id="name" required>
+
+            <label>Email</label>
+            <input type="email" id="email" required>
+
+            <label>Message</label>
+            <textarea id="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+        <p id="formResponse"></p>
+    </section>
+
+<script src="script.js"></script>
+</body>
 </html>
